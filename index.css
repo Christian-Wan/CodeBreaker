@@ -21,9 +21,9 @@ span {
     border-color: blue;
 }
 .button {
-    width: 18%;
+    width: 30%;
     height: 100%;
-    aspect-ratio: 1/1;
+    border-style: solid;
     margin:0%
 }
 #containButton {

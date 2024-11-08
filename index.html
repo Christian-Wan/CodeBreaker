@@ -6,36 +6,25 @@
         <link rel="stylesheet" href="index.css">
         <title>Code Breaker!</title>
     </head>
-    <body>
+    <body onload="startRound()">
         <div id="container">
             <p id="score">Score:</p>
             <p id="clock">Time:</p>
-            <p id="currentGuess"></p>
             <div id="safe">
                 <span id="takeSpace">
-                    Code
-                    <!--
-                    Empty span to space buttons
-                    -->
+                    <p id="currentGuess"></p>
+                    <div class = "button" onclick="clearCurrentGuess()">Clear</div>
+
                 </span>
                 <span id="containButton">
                     <div class="containButtons">
-                        <span class="button">Button1</span>
-                        <span class="button">Button2</span>
-                        <span class="button">Button3</span>
-                        <span class="button">Button4</span>
-                        <span class="button">Button5</span>
-                    </div>
-                    <div class="containButtons">
-                        <span class="button">Button6</span>
-                        <span class="button">Button7</span>
-                        <span class="button">Button8</span>
-                        <span class="button">Button9</span>
-                        <span class="button">Button0</span>
+                        <span class="button" onclick="addGuess(1)">Button1</span>
+                        <span class="button" onclick="addGuess(2)">Button2</span>
+                        <span class="button" onclick="addGuess(3)">Button3</span>
                     </div>
                 </span>
             </div>
-            <p>Previous Guesses</p>
+            <p id="previousGuesses">Previous Guesses</p>
         </div>
         <script src="index.js"></script>
     </body>
