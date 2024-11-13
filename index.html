@@ -12,19 +12,19 @@
             <p id="clock">Time:</p>
             <div id="safe">
                 <span id="takeSpace">
-                    <p id="currentGuess"></p>
-                    <div class = "button" onclick="clearCurrentGuess()">Clear</div>
+                    <div id="containGuess">
+                        <p id="currentGuess"></p>
+                    </div>
+                    <div class = "button" onclick="clearCurrentGuess()" id="clearButton">Clear</div>
 
                 </span>
                 <span id="containButton">
-                    <div class="containButtons">
-                        <span class="button" onclick="addGuess(1)">Button1</span>
-                        <span class="button" onclick="addGuess(2)">Button2</span>
-                        <span class="button" onclick="addGuess(3)">Button3</span>
-                    </div>
+                        <span class="button" onclick="addGuess(1)" id="button1">1</span>
+                        <span class="button" onclick="addGuess(2)" id="button2">2</span>
+                        <span class="button" onclick="addGuess(3)" id="button3">3</span>
                 </span>
             </div>
-            <p id="previousGuesses">Previous Guesses</p>
+            <p id="previousGuesses">Previous Guesses:</p>
         </div>
         <script src="index.js"></script>
     </body>

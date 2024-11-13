@@ -12,6 +12,7 @@ function startRound() {
     time = 7;
     randomCode();
     updateHTML();
+    guessEl.innerHTML = "Guess Code"
 }
 
 function randomCode() {
@@ -20,7 +21,6 @@ function randomCode() {
         number = Math.floor(Math.random() * 3) + 1;
         code += number.toString();
     }
-    guessEl.innerHTML = code;
 }
 
 function addGuess(value) {
@@ -28,17 +28,16 @@ function addGuess(value) {
     guessEl.innerHTML = guess;
     if (guess.length == 3) {
         checkAnswer();
-        guessEl.innerHTML = ""
     }
 }
 
 function checkAnswer() {
     if (guess === code) {
         score += time;
-        time = 7;
+        guessEl.innerHTML = "Guess Code"
+        startRound();
         previousGuesses = [];
         clearGuesses();
-        startRound()
     }
     else {
         time--;
@@ -53,8 +52,10 @@ function checkAnswer() {
             clearGuesses();
             startRound();
         }
+        updateHTML()
     }
     guess = "";
+    guessEl.innerHTML = "Guess Code"
 }
 
 function addToGuesses(highOrLow) {
@@ -67,7 +68,7 @@ function clearGuesses() {
 
 function clearCurrentGuess() {
     guess = "";
-    guessEl.innerHTML = ""
+    guessEl.innerHTML = "Guess Code"
 }
 
 function updateHTML() {

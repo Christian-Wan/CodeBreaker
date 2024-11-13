@@ -8,10 +8,11 @@ span {
     display: inline-block;
 }
 #container {
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin:auto;
     border: 3px solid;
+    min-width: 500px;
 }
 #safe {
     border: 3px solid;
@@ -21,17 +22,40 @@ span {
     border-color: blue;
 }
 .button {
+    font-size: 50px;
     width: 30%;
-    height: 100%;
+    height:inherit;
     border-style: solid;
-    margin:0%
+    margin: 1%;
+    padding: 0%;
+    overflow: hidden;
+    line-height: 180px;
+    vertical-align: middle;
+    text-align:center;
+    aspect-ratio: 4/3;
 }
-#containButton {
+#button1 {
+    float: inline-start;
+}
+#button2 {
+    float:left;
+}
+#button3 {
+    float: left;
+    white-space: nowrap;
+}
+#clearButton {
+    font-size: 100%;
+    width: 50%;
+    line-height: 55px;
+    aspect-ratio: 5/1;
+}
+#containButton { 
     width: 58%;
+    padding: 0%;
+    height: 100%;
     margin:0%;
 }
-.containButtons {
-    width: 100%;
-    height: 100px;
-    margin:0%;
+#containGuess {
+    margin: 1%;
 }
